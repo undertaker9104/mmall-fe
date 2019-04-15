@@ -1,8 +1,11 @@
 /*
- * @Author: mikey.zhaopeng 
+ * @Author: Kris 
  * @Date: 2019-04-12 07:17:11 
- * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-04-12 08:00:33
+ * @Last Modified by: Kris
+ * @Last Modified time: 2019-04-15 19:43:10
  */
 'use strict';
-console.log('I am global');
+
+require('./layout.css');
+require('node_modules/font-awesome/css/font-awesome.min.css');
+require('./footer/index.css');

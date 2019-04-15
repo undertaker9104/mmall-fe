@@ -1,0 +1,29 @@
+/*
+ * @Author: Kris 
+ * @Date: 2019-04-14 15:42:48 
+ * @Last Modified by: Kris
+ * @Last Modified time: 2019-04-14 15:54:15
+ */
+.nav{
+    background: #eee;
+    height: 30px;
+    line-height: 30px;
+}
+/*用戶*/
+.nav .user{
+    float: left;
+}
+.nav .user.login{
+    display: none;
+}
+.nav .user .link{
+    margin-right: 5px;
+}
+/*導航連接部分*/
+.nav .nav-list{
+    float: right;
+}
+.nav .nav-list .nav-item{
+    display: inline-block;
+    margin-left: 5px;
+}

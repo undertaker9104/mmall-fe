@@ -1,0 +1,22 @@
+/*
+ * @Author: Kris 
+ * @Date: 2019-04-15 19:42:49 
+ * @Last Modified by: Kris
+ * @Last Modified time: 2019-04-15 19:46:51
+ */
+ .footer{
+     padding-bottom: 10px;
+ }
+.footer .links{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
+.footer .links .link{
+    padding: 0 10px;
+}
+.footer .copyright{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
