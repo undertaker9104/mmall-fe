@@ -2,7 +2,7 @@
  * @Author: Kris 
  * @Date: 2019-04-14 15:25:24 
  * @Last Modified by: Kris
- * @Last Modified time: 2019-04-14 15:33:15
+ * @Last Modified time: 2019-04-20 14:02:31
  */
 .nav-simple{
     height: 60px;
@@ -15,4 +15,5 @@
     font-size: 26px;
     font-weight: bold;
     color: #c60023;
+    text-decoration: none;
 }

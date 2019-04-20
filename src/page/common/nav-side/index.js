@@ -2,7 +2,7 @@
  * @Author: Kris 
  * @Date: 2019-04-14 15:42:51 
  * @Last Modified by: Kris
- * @Last Modified time: 2019-04-16 07:11:08
+ * @Last Modified time: 2019-04-20 15:32:20
  */
 require('./index.css');
 var _mm = require('util/mm.js');
@@ -14,7 +14,7 @@ var navSide = {
         navList : [
             {name: 'user-center', desc: '個人中心', href: './user-center.html'},
             {name: 'order-list', desc: '我的訂單', href: './order-list.html'},
-            {name: 'pass-update', desc: '修改密碼', href: './pass-update.html'},
+            {name: 'user-pass-update', desc: '修改密碼', href: './user-pass-update.html'},
             {name: 'about', desc: '關於hymall', href: './about.html'}
         ]
     },

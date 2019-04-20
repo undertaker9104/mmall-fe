@@ -2,7 +2,7 @@
  * @Author: Kris 
  * @Date: 2019-04-13 09:46:27 
  * @Last Modified by: Kris
- * @Last Modified time: 2019-04-14 16:06:01
+ * @Last Modified time: 2019-04-17 19:44:06
  */
 'use strict';
 var Hogan = require('hogan.js');
@@ -79,7 +79,7 @@ var _mm = {
     },
     //統一登入
     doLogin : function() {
-        window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
     },
     goHome : function() {
         window.location.href = './index.html';

@@ -2,7 +2,7 @@
  * @Author: Kris 
  * @Date: 2019-04-12 06:49:08 
  * @Last Modified by: Kris
- * @Last Modified time: 2019-04-16 07:20:15
+ * @Last Modified time: 2019-04-20 15:26:18
  */
 var webpack = require('webpack');
 var Ex = require('extract-text-webpack-plugin');
@@ -26,7 +26,12 @@ var config = {
     entry: {
         'common' : ['./src/page/common/index.js'],
         'index': ['./src/page/index/index.js'],
-        'login': ['./src/page/login/index.js'],
+        'user-login': ['./src/page/user-login/index.js'],
+        'user-register': ['./src/page/user-register/index.js'],
+        'user-center': ['./src/page/user-center/index.js'],
+        'user-center-update': ['./src/page/user-center-update/index.js'],
+        'user-pass-update': ['./src/page/user-pass-update/index.js'],
+        'user-pass-reset': ['./src/page/user-pass-reset/index.js'],
         'result': ['./src/page/result/index.js'],
     },
     output: {
@@ -73,7 +78,12 @@ var config = {
         new Ex('css/[name].css'),
         // html模板的處理
         new HtmlWebpackPlugin(getHtmlConfig('index', '首頁')),
-        new HtmlWebpackPlugin(getHtmlConfig('login', '用戶登入')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-login', '用戶登入')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-register', '用戶註冊')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密碼')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-center', '個人中心')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '個人中心修改')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '密碼修改')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作結果')),
     ]
 };

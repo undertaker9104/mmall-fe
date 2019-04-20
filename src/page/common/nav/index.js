@@ -2,7 +2,7 @@
  * @Author: Kris 
  * @Date: 2019-04-14 15:42:51 
  * @Last Modified by: Kris
- * @Last Modified time: 2019-04-14 16:32:22
+ * @Last Modified time: 2019-04-18 20:35:46
  */
 require('./index.css');
 var _mm = require('util/mm.js');
@@ -23,7 +23,7 @@ var nav = {
         });
         //註冊點擊事件
         $('.js-register').click(function(){
-            window.location.href = './register.html';
+            window.location.href = './user-register.html';
         });
         //退出點擊事件
         $('.js-logout').click(function(){

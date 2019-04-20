@@ -1,0 +1,17 @@
+/*
+ * @Author: Kris 
+ * @Date: 2019-04-20 14:06:23 
+ * @Last Modified by:   Kris 
+ * @Last Modified time: 2019-04-20 14:06:23 
+ */
+
+.form-line{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.form-line .label{
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+}
