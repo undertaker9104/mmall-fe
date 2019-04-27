@@ -2,7 +2,7 @@
  * @Author: Kris 
  * @Date: 2019-04-14 14:30:10 
  * @Last Modified by: Kris
- * @Last Modified time: 2019-04-20 14:11:51
+ * @Last Modified time: 2019-04-22 11:34:15
  */
  /* css reset*/
  *{
@@ -34,6 +34,7 @@ input[type='checkbox']{
     position: relative;
     overflow: hidden;
 }
+
 
 /* panel */
 .panel{
@@ -90,6 +91,7 @@ input[type='checkbox']{
     cursor: pointer;
     text-decoration: none;
 }
+
 .btn-mini{
     height: 25px;
     line-height: 25px;

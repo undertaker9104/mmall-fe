@@ -2,13 +2,14 @@
  * @Author: Kris 
  * @Date: 2019-04-15 19:51:19 
  * @Last Modified by: Kris
- * @Last Modified time: 2019-04-15 20:16:53
+ * @Last Modified time: 2019-04-22 12:21:09
  */
 require('./index.css');
 var _mm = require('util/mm.js');
 //通用搜尋
 var header = {
     init : function() {
+        this.onload();
         this.bindEvent();
     },
     onload: function() {
