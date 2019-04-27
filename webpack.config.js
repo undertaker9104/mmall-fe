@@ -2,7 +2,7 @@
  * @Author: Kris 
  * @Date: 2019-04-12 06:49:08 
  * @Last Modified by: Kris
- * @Last Modified time: 2019-04-23 20:01:41
+ * @Last Modified time: 2019-04-27 10:36:52
  */
 var webpack = require('webpack');
 var Ex = require('extract-text-webpack-plugin');
@@ -28,6 +28,7 @@ var config = {
         'index': ['./src/page/index/index.js'],
         'list': ['./src/page/list/index.js'],
         'detail': ['./src/page/detail/index.js'],
+        'cart': ['./src/page/cart/index.js'],
         'user-login': ['./src/page/user-login/index.js'],
         'user-register': ['./src/page/user-register/index.js'],
         'user-center': ['./src/page/user-center/index.js'],
@@ -82,6 +83,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('index', '首頁')),
         new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表頁')),
         new HtmlWebpackPlugin(getHtmlConfig('detail', '商品詳情頁')),
+        new HtmlWebpackPlugin(getHtmlConfig('cart', '購物車')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用戶登入')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '用戶註冊')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密碼')),
