@@ -2,7 +2,7 @@
  * @Author: Kris 
  * @Date: 2019-04-12 06:49:08 
  * @Last Modified by: Kris
- * @Last Modified time: 2019-04-27 10:36:52
+ * @Last Modified time: 2019-05-05 11:38:02
  */
 var webpack = require('webpack');
 var Ex = require('extract-text-webpack-plugin');
@@ -29,6 +29,10 @@ var config = {
         'list': ['./src/page/list/index.js'],
         'detail': ['./src/page/detail/index.js'],
         'cart': ['./src/page/cart/index.js'],
+        'order-confirm'     : ['./src/page/order-confirm/index.js'],
+        'order-list'        : ['./src/page/order-list/index.js'],
+        'order-detail'      : ['./src/page/order-detail/index.js'],
+        'payment'           : ['./src/page/payment/index.js'],
         'user-login': ['./src/page/user-login/index.js'],
         'user-register': ['./src/page/user-register/index.js'],
         'user-center': ['./src/page/user-center/index.js'],
@@ -84,6 +88,10 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表頁')),
         new HtmlWebpackPlugin(getHtmlConfig('detail', '商品詳情頁')),
         new HtmlWebpackPlugin(getHtmlConfig('cart', '購物車')),
+        new HtmlWebpackPlugin(getHtmlConfig('order-confirm', '訂單確認')),
+        new HtmlWebpackPlugin(getHtmlConfig('order-list', '訂單列表')),
+        new HtmlWebpackPlugin(getHtmlConfig('order-detail', '訂單詳情')),
+        new HtmlWebpackPlugin(getHtmlConfig('payment', '訂單支付')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用戶登入')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '用戶註冊')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密碼')),
