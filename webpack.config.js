@@ -2,7 +2,7 @@
  * @Author: Kris 
  * @Date: 2019-04-12 06:49:08 
  * @Last Modified by: Kris
- * @Last Modified time: 2019-05-05 11:38:02
+ * @Last Modified time: 2019-05-05 12:35:49
  */
 var webpack = require('webpack');
 var Ex = require('extract-text-webpack-plugin');
@@ -10,16 +10,17 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 //環境變量的配置, dev/online
 var WEBPACk_ENV = process.env.WEBPACk_ENV || 'dev';
 // 獲取html webpack plugin 參數的方法
-var getHtmlConfig = function (name, title) {
+var getHtmlConfig = function(name, title){
     return {
-        template : './src/view/' + name + '.html',
-        filename : 'view/' + name + '.html',
-        title : title,
-        inject : true,
-        hash : true,
-        chunks : ['common', name]
-    }
-}
+        template    : './src/view/' + name + '.html',
+        filename    : 'view/' + name + '.html',
+        favicon     : './favicon.ico',
+        title       : title,
+        inject      : true,
+        hash        : true,
+        chunks      : ['common', name]
+    };
+};
 
 // webpack-config
 var config = {
@@ -29,6 +30,7 @@ var config = {
         'list': ['./src/page/list/index.js'],
         'detail': ['./src/page/detail/index.js'],
         'cart': ['./src/page/cart/index.js'],
+        'about': ['./src/page/about/index.js'],
         'order-confirm'     : ['./src/page/order-confirm/index.js'],
         'order-list'        : ['./src/page/order-list/index.js'],
         'order-detail'      : ['./src/page/order-detail/index.js'],
@@ -42,9 +44,9 @@ var config = {
         'result': ['./src/page/result/index.js'],
     },
     output: {
-        path: './dist',
-        publicPath : '/dist',
-        filename: 'js/[name].js'
+        path        : __dirname + '/dist/',
+        publicPath  : 'dev' === WEBPACk_ENV ? '/dist/' : '//s.hymall.site/mmall-fe/dist/',
+        filename    : 'js/[name].js'
     },
     externals: {
         'jquery' : 'window.jQuery'
@@ -53,7 +55,14 @@ var config = {
         // 单独打包出CSS，这里配置注意下
         loaders: [{test: /\.css$/,loader: Ex.extract('style-loader', 'css-loader') },
                   {test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,loader: 'url-loader?limit=100&name=resource/[name].[ext]' },
-                  {test: /\.string$/,loader: 'html-loader'}
+                  {
+                    test: /\.string$/, 
+                    loader: 'html-loader',
+                    query : {
+                        minimize : true,
+                        removeAttributeQuotes : false
+                    }
+                }
         ]
       },
     resolve: {
@@ -90,6 +99,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('cart', '購物車')),
         new HtmlWebpackPlugin(getHtmlConfig('order-confirm', '訂單確認')),
         new HtmlWebpackPlugin(getHtmlConfig('order-list', '訂單列表')),
+        new HtmlWebpackPlugin(getHtmlConfig('about', '關於我們')),
         new HtmlWebpackPlugin(getHtmlConfig('order-detail', '訂單詳情')),
         new HtmlWebpackPlugin(getHtmlConfig('payment', '訂單支付')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用戶登入')),
