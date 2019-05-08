@@ -2,7 +2,7 @@
  * @Author: Kris 
  * @Date: 2019-04-12 06:49:08 
  * @Last Modified by: Kris
- * @Last Modified time: 2019-05-08 19:28:47
+ * @Last Modified time: 2019-05-08 19:43:12
  */
 var webpack = require('webpack');
 var Ex = require('extract-text-webpack-plugin');
@@ -45,7 +45,7 @@ var config = {
     },
     output: {
         path        : __dirname + '/dist/',
-        publicPath  : 'dev' === WEBPACk_ENV ? '/dist/' : '//s.hymall.site/mmall-fe/dist/',
+        publicPath  : '//s.hymall.site/mmall-fe/dist/',
         filename    : 'js/[name].js'
         // path: './dist',
         // publicPath : '/dist',
